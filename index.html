@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Всі завдання</title>
+</head>
+<body>
+
+<h2>1. Зміна тексту кнопки</h2>
+<input type="text" id="inputText" placeholder="Введіть текст">
+<button id="myButton">Натисни мене</button>
+
+<hr>
+
+<h2>2. Зміна зображення</h2>
+<h3>Моє зображення</h3>
+<img id="myImage" src="image1.jpg" width="300">
+
+<hr>
+
+<h2>3. Посилання і зображення</h2>
+<a id="myLink" href="https://example.com">Перейти</a>
+<br><br>
+<img id="myImg" src="image.jpg" width="300">
+
+<hr>
+
+<h2>4. Список</h2>
+<ul id="myList">
+  <li>Елемент 1</li>
+  <li>Елемент 2</li>
+  <li>Елемент 3</li>
+</ul>
+
+<script>
+  const input = document.getElementById("inputText");
+  const button = document.getElementById("myButton");
+
+  button.addEventListener("click", function() {
+    button.textContent = input.value;
+  });
+
+  const image = document.getElementById("myImage");
+  image.src = "image2.jpg";
+
+  const link = document.getElementById("myLink");
+  const img = document.getElementById("myImg");
+
+  link.href = "https://google.com";
+  img.setAttribute("alt", "Опис зображення");
+
+  const list = document.getElementById("myList");
+  const firstItem = list.querySelector("li");
+  firstItem.textContent = "Новий текст";
+</script>
+
+</body>
+</html>
